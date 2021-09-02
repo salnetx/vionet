@@ -1,11 +1,19 @@
 {
-  "name": "sourcecode",
-  "version": "2.0.0",
-  "description": "vionet home page",
+  "name": "vionet",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilnetic/vionet.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahilnetic/vionet/issues"
+  },
+  "homepage": "https://github.com/sahilnetic/vionet#readme"
 }
