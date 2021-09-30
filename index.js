@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8080;
 const path = require('path')
-app.use(express.static('public'))
+// app.use(express.static('public'))
 
-app.get('/',(req,res)=>{
+app.get('/home',(req,res)=>{
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 app.get('/apps',(req,res)=>{
