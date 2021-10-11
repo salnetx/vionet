@@ -10,6 +10,23 @@ app.get('/',(req,res)=>{
     res.render('index')
 })
 
+app.get('/apps',(req,res)=>{
+    res.render('navBar')
+})
+
+app.get('/opensource',(req,res)=>{
+    res.render('navBar')
+})
+
+app.get('/press',(req,res)=>{
+    res.render('navBar')
+})
+
+app.get('/careers',(req,res)=>{
+    res.render('navBar')
+})
+
+
 
 app.listen(PORT,()=>{
     console.log(`App is booming at port ${PORT}`)
