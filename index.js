@@ -23,7 +23,7 @@ app.get('/press',(req,res)=>{
 })
 
 app.get('/careers',(req,res)=>{
-    res.render('navBar')
+    res.render('career')
 })
 
 
