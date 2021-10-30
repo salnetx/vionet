@@ -12,10 +12,9 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <title>vionet</title>
@@ -37,8 +36,47 @@
 
   <body
     class="overflow-x-hidden antialiased w-full"
-    style="font-family: 'Josefin Sans', sans-serif"
+    style="font-family: 'Poppins', sans-serif;"
   >
+  <header class="header m-4">
+    <!-- container -->
+    <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">
+        <!-- header wrapper -->
+            <div class="header-wrapper flex items-center justify-between">
+
+                <!-- header logo -->
+                <div class="header-logo">
+                    <h1 class="font-semibold text-black leading-relaxed"><img style="width: 130px;" src="./static/vi.png"></h1>
+                </div>
+
+                <!-- mobile toggle -->
+                <div class="toggle md:hidden">
+                    <button @click=" isOpen = true" @keydown.escape=" isOpen = false">
+                        <svg 
+                            class="h-6 w-6 fill-current text-black"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navbar -->
+                <navbar class="navbar hidden md:block">
+                    <ul class="flex space-x-8 text-sm font-semibold">
+                        <li><a href="#" class="hover:text-gray-400 text-gray-500 pb-2">Who We Are</a></li>
+                        <li><a href="#" class="hover:text-gray-400 text-gray-500">What We Build</a></li>
+                        <li><a href="comingsoon.html" class="hover:text-gray-400 text-gray-500">For Developers</a></li>
+                        <li><a href="comingsoon.html" class="hover:text-gray-400 text-gray-500">For Press</a></li>
+                        <li><a href="comingsoon.html" class="hover:text-gray-400 text-gray-500">Careers</a></li>
+                      </ul>
+                </navbar>
+
+            </div>
+    </div>
+
+</header>
     <!-- HERO SECTION -->
     <div>
       <div
@@ -54,7 +92,7 @@
         <div>
           <div class="inset-0 h-screen">
             <video
-              src="https://vioimg.vercel.app/video.mp4"
+              src="./static/vidi.mp4"
               autoplay
               muted
               loop
@@ -65,135 +103,10 @@
           <div class="absolute inset-0 z-40 flex justify-between h-full px-8">
             <div class="relative z-20 w-full h-24 pt-2">
               <div class="flex items-center justify-between h-full w-full">
-                <h1 class="z-30 text-white text-3xl font-bold">vionet</h1>
 
-                <div
-                  id="nav"
-                  class="
-                    text-white
-                    absolute
-                    top-0
-                    left-0
-                    hidden
-                    block
-                    w-full
-                    mt-20
-                    border-b border-gray-200
-                    sm:border-none
-                    sm:px-5
-                    sm:block
-                    sm:relative
-                    sm:mt-0
-                    sm:px-0
-                    sm:w-auto
-                  "
-                >
-                  <nav
-                    class="
-                      flex flex-col
-                      items-center
-                      py-3
-                      bg-red-500
-                      sm:flex-row sm:bg-transparent sm:border-none sm:py-0
-                    "
-                  >
-                    <a
-                      href="/opensource"
-                      class="
-                        px-1
-                        mb-1 mb-5
-                        mr-0
-                        text-base
-                        sm:mb-0 sm:mr-4
-                        lg:mr-8
-                        uppercase
-                      "
-                      >OpenSource</a
-                    >
-                    <a
-                      href="/apps"
-                      class="
-                        px-1
-                        mb-1 mb-5
-                        mr-0
-                        text-base
-                        sm:mb-0 sm:mr-4
-                        lg:mr-8
-                        uppercase
-                      "
-                      >Our Apps</a
-                    >
-                    <a
-                      href="/press"
-                      class="
-                        px-1
-                        mb-1 mb-5
-                        mr-0
-                        text-base
-                        sm:mb-0 sm:mr-4
-                        lg:mr-8
-                        uppercase
-                      "
-                      >Press</a
-                    >
-                    <a target="_blank"
-                      href="https://form.jotform.com/212960442227452"
-                      class="
-                        px-1
-                        mb-1 mb-5
-                        mr-0
-                        text-base
-                        sm:mb-0 sm:mr-4
-                        lg:mr-8
-                        uppercase
-                      "
-                      >Careers</a
-                    >
-                  </nav>
-                </div>
 
-                <div
-                  id="nav-mobile-btn"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    z-50
-                    block
-                    w-6
-                    mt-8
-                    mr-10
-                    cursor-pointer
-                    select-none
-                    sm:hidden sm:mt-10
-                  "
-                >
-                  <span
-                    class="
-                      block
-                      w-full
-                      h-1
-                      mt-2
-                      duration-200
-                      transform
-                      bg-white
-                      rounded-full
-                      sm:mt-1
-                    "
-                  ></span>
-                  <span
-                    class="
-                      block
-                      w-full
-                      h-1
-                      mt-1
-                      duration-200
-                      transform
-                      bg-white
-                      rounded-full
-                    "
-                  ></span>
-                </div>
+
+         
               </div>
             </div>
           </div>
@@ -230,36 +143,36 @@
               md:flex-row md:justify-between
             "
           >
-            <div class="flex flex-col items-center justify-center mx-auto">
-              <div class="relative text-center">
-                <h1
-                  class="
-                    text-white
-                    relative
-                    mb-4
-                    text-6xl
-                    font-bold font-sans
-                    italic
-                    leading-none
-                    text-center
-                    lg:text-9xl
-                    xl:text-9xl
-                  "
-                >
-                  ENRICHING<br /><span style="color: #FE2C55 ">YOUR LIFE</span>
-                </h1>
-                <p style="color: #25F4EE;"
-                  class="
-                    text-gray-400 text-sm
-                    lg:text-4xl lg:text-center
-                    font-sans
-                    italic
-                  "
-                >
-                  
-                </p>
-              </div>
+          <div class="flex flex-col items-center justify-center mx-auto">
+            <div class="relative text-center">
+              <h1
+                class="
+                  text-white
+                  relative
+                  mb-4
+                  text-6xl
+                  font-bold font-sans
+                  italic
+                  leading-none
+                  text-center
+                  lg:text-9xl
+                  xl:text-9xl
+                "
+              >
+                ENRICHING<br /><span style="color: #FE2C55 ">YOUR LIFE</span>
+              </h1>
+              <p style="color: #25F4EE;"
+                class="
+                  text-gray-400 text-sm
+                  lg:text-4xl lg:text-center
+                  font-sans
+                  italic
+                "
+              >
+                
+              </p>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -268,41 +181,20 @@
     <section style="font-family: 'Poppins', sans-serif;" class="font-mono bg-white container mx-auto py-8 px-5">
       <div class="flex flex-col items-center">
         <div class="flex flex-col w-full text-left">  
-          <div class="w-full mx-auto lg:w-1/2">
-            <h1 class="mx-auto mb-6 text-2xl text-black lg:text-3xl font-extrabold">Latest Updates</h1>
-            <img class="rounded-lg" src="./static/neberly.png" />
-            <h2 class="mx-auto mt-4 mb-4 text-xl font-semibold text-black">We're launching myrph.in soon</h2>
-            <p class="mx-auto text-base font-medium leading-relaxed text-gray-800"></p>
-             </div>
-             <section class="text-gray-600 body-font">
-              <div class="container px-5 py-24 mx-auto">
-                <div class="flex flex-wrap w-full mb-20">
-                  <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Our Apps</h1>
-                    <div class="h-1 w-20 bg-pink-500 rounded"></div>
-                  </div>
-                  <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">www.vionet.tech/apps</p>
-                </div>
-                <div class="flex flex-wrap -m-4">
-                  <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                      <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/neberlyapp.png" alt="content">
-                      <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">www.neberly.com</h3>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-4">neberly</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                    </div>
-                  </div>
-                  <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                      <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/addby.png" alt="content">
-                      <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">www.addby.me</h3>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-4">addbyme</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+
+    <section class="bg-white dark:bg-gray-800">
+  
+      <div class="container px-6 py-16 mx-auto text-center">
+          <div class="max-w-lg mx-auto">
+            <img class="rounded-lg" src="./static/viot.png" />
+                          <p class="mt-6 text-gray-500 text-xl text-gray-700 font-semibold">We build technologies that help people generate new revenue stream.</p>
+              <button
+                  class="px-6 py-2 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-500 md:mx-0 md:w-auto focus:outline-none">
+                  Our Apps
+              </button>
+          </div>
+
+  </section>
           <div class="p-4 mt-4 bg-white border rounded-lg w-full mx-auto lg:w-1/2">
             <div class="flex py-2 mb-4 w-full">
               <img src="https://avatars.githubusercontent.com/u/86605477?s=400&u=12d904a57dd96af3f9bfd6e5200bf17715c9c296&v=4" class="object-cover w-12 h-12 mr-2 rounded-full" />
