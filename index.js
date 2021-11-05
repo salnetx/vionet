@@ -9,7 +9,9 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 app.get('/',(req,res)=>{
     res.render('index')
 })
-
+app.get('/addrup',(req,res)=>{
+    res.render('addrup')
+})
 app.get('/apps',(req,res)=>{
     res.render('navBar')
 })
