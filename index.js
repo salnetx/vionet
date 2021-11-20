@@ -11,23 +11,15 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 app.get('/',(req,res)=>{
     res.render('index')
 })
-app.get('/addrup',(req,res)=>{
-    res.render('addrup')
+
+app.get('/ads',(req,res)=>{
+    res.render('ads')
 })
+
+
+
 app.get('/apps',(req,res)=>{
-    res.render('navBar')
-})
-
-app.get('/opensource',(req,res)=>{
-    res.render('navBar')
-})
-
-app.get('/press',(req,res)=>{
-    res.render('navBar')
-})
-
-app.get('/careers',(req,res)=>{
-    res.render('career')
+    res.render('app')
 })
 
 
